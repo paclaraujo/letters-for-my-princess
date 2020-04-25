@@ -1,58 +1,101 @@
 * {
-  font-family: 'Amatic SC', cursive;
   box-sizing: border-box;
+  font-family: 'Amatic SC', cursive;
 }
 
 .home-container {
+  background-attachment: fixed;
+  background-image: url("./assets/belle.png");
+  background-position: 100%;
+  background-repeat: no-repeat;
   margin: 0;
   padding: 0;
-  background-image: url("./assets/belle.png");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 100%;
 }
 
 .home-description {
-  width: 40vw;
   margin: 5vh 5vw;
+  width: 40vw;
 }
 
-.home-title {
+.page-title {
   color: #f4b7ad;
   font-size: 40px;   
 }
 
-.home-text {
-  font-size: 35px;  
+.page-text {
   color: #908a82;
+  font-size: 35px;  
   line-height: 1.4em;
 }
 
 .get-started-box {
-  margin-right: 2vw;
   display: flex;
   justify-content: flex-end;
+  margin-right: 2vw;
 }
 
 .btn {
-  padding: 1vh 1vw;
-  margin: 0 0 0 3vw;
   background-color: #f4b7ad;
   border: none;
   border-radius: 10px;
   color: white;
-  font-size: 26px;
-  font-family: 'Amatic SC', cursive;
   cursor: pointer;
+  font-size: 26px;
+  margin: 0 0 0 3vw;
+  padding: 1vh 1vw;
 }
 
 .btn a {
-  text-decoration: none;
   color: white;  
+  text-decoration: none;
 }
 
 .btn:hover {
   background-color: #fccbc4;
+}
+
+.page-background {
+  background-color: #fdf3e5;
+}
+
+.return-link {
+  color: #f4b7ad;
+  font-size: 35px;
+  margin: 3vh 3vw; 
+  text-decoration: none;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  background-color: white;
+  height: auto;
+  margin: 2vh 3vw;
+  padding: 1vh 4vw; 
+}
+
+.container-shadow {
+	box-shadow: 4px 8px 6px -5px #777;
+	-moz-box-shadow: 4px 8px 6px -5px #777;
+	-webkit-box-shadow: 4px 8px 6px -5px #777;
+}
+
+.offset-input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #f4b7ad;
+  color: #908a82; 
+  font-size: 30px;
+  text-align: center;
+  width: 100%;
+}
+
+.cipher-btn {
+  margin: auto;
+  width: 45%;
 }
 
 @media only screen and (max-width: 1350px) {
@@ -63,9 +106,9 @@
   }
 
   .home-description {
-    width: 80vw;
+    background-color: rgba(255, 255, 255, 0.9);
     margin: 5vh auto;
     padding: 3vh 4vw;
-    background-color: rgba(255, 255, 255, 0.9);
+    width: 80vw;
   }
 }

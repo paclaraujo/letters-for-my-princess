@@ -1,0 +1,29 @@
+{
+  "name": "letters-for-my-princess",
+  "version": "1.0.0",
+  "description": "An app to code and encode messages.",
+  "main": "src/index.html",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest --verbose --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paclaraujo/letters-for-my-princess.git"
+  },
+  "keywords": [
+    "caesar",
+    "cipher",
+    "encode",
+    "decode",
+    "responsive"
+  ],
+  "author": "Paloma C L Araujo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paclaraujo/letters-for-my-princess/issues"
+  },
+  "homepage": "https://github.com/paclaraujo/letters-for-my-princess#readme"
+}

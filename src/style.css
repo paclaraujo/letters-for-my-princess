@@ -1,0 +1,16 @@
+.home-container {
+    margin: 0;
+    padding: 0;
+    background-image: url("./assets/belle.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 100%;
+}
+
+@media only screen and (max-width: 1350px) {
+    .home-container {
+        background-image: url("./assets/mobile.png");
+        background-position: none;
+        background-size: cover;
+    }
+}

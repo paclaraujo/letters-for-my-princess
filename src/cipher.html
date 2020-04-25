@@ -13,7 +13,7 @@
     <a class="return-link" href="index.html">Back</a>
   </nav>
   <main>
-    <div class="center">
+    <div id="offset-and-options" class="center">
       <section class="container container-shadow">
         <h1 class="page-title">Dear Belle,</h1>
         <p class="page-text">How many petals had to fall for you to say you loved me?</p>
@@ -27,20 +27,20 @@
         <h2 class="page-text">Beast</h2>
       </section>
     </div>
-    <div class="cipher-container">
+    <div id="write-letter" class="cipher-container invisible">
       <section>
         <p class="page-text">I will always write the most beautiful letters for you</p>
         <textarea class="page-text message-box" id="message" type="text" placeholder="Here my secret letter"></textarea>
-        <p class="choose-option-again">Choose option again</p>
+        <p id="return-to-options" class="choose-option-again">Choose option again</p>
       </section>
       <section class="container container-shadow">
         <h1 class="page-title">Dear Belle,</h1>
-        <div class="page-text letter-box"></div>
+        <div id="final-message" class="page-text letter-box"></div>
         <p class="page-text">I love you so much. Your eternal love,</p>
         <h2 class="page-text">Beast</h2>
       </section>
     </div>
   </main> 
-  <script src="js/index.js"></script>
+  <script src="js/index.js" type="module"></script>
 </body>
 </html>

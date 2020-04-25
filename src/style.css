@@ -1,16 +1,71 @@
+* {
+  font-family: 'Amatic SC', cursive;
+  box-sizing: border-box;
+}
+
 .home-container {
-    margin: 0;
-    padding: 0;
-    background-image: url("./assets/belle.png");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url("./assets/belle.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 100%;
+}
+
+.home-description {
+  width: 40vw;
+  margin: 5vh 5vw;
+}
+
+.home-title {
+  color: #f4b7ad;
+  font-size: 40px;   
+}
+
+.home-text {
+  font-size: 35px;  
+  color: #908a82;
+  line-height: 1.4em;
+}
+
+.get-started-box {
+  margin-right: 2vw;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn {
+  padding: 1vh 1vw;
+  margin: 0 0 0 3vw;
+  background-color: #f4b7ad;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 26px;
+  font-family: 'Amatic SC', cursive;
+  cursor: pointer;
+}
+
+.btn a {
+  text-decoration: none;
+  color: white;  
+}
+
+.btn:hover {
+  background-color: #fccbc4;
 }
 
 @media only screen and (max-width: 1350px) {
-    .home-container {
-        background-image: url("./assets/mobile.png");
-        background-position: none;
-        background-size: cover;
-    }
+  .home-container {
+    background-image: url("./assets/mobile.png");
+    background-position: none;
+    background-size: cover;
+  }
+
+  .home-description {
+    width: 80vw;
+    margin: 5vh auto;
+    padding: 3vh 4vw;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
 }

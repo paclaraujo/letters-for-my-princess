@@ -5,7 +5,7 @@ export default {
     MAX: "Z".charCodeAt()
   },
   LOWERCASE: {
-    MIN: "A".charCodeAt(),
-    MAX: "Z".charCodeAt()
+    MIN: "a".charCodeAt(),
+    MAX: "z".charCodeAt()
   }
 }

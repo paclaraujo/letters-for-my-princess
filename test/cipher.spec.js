@@ -12,7 +12,7 @@ describe('cipher', () => {
     expect(() => cipher(0, 0)).toThrow(TypeError);
   });
 
-  describe('cipher with positive direction', () => {
+  describe('cipher with positive offset', () => {
     it('should return "HIJKLMNOPQRSTUVWXYZABCDEFG" for "ABCDEFGHIJKLMNOPQRSTUVWXYZ" with offset 33', () => {
       expect(cipher(33, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')).toBe('HIJKLMNOPQRSTUVWXYZABCDEFG');
     });
@@ -26,17 +26,17 @@ describe('cipher', () => {
     });
   });
 
-  describe('cipher with negative direction', () => {
+  describe('cipher with negative offset', () => {
     it('should return "ABCDEFGHIJKLMNOPQRSTUVWXYZ" for "HIJKLMNOPQRSTUVWXYZABCDEFG" with offset 33', () => {
-      expect(cipher(33, 'HIJKLMNOPQRSTUVWXYZABCDEFG', -1)).toBe('ABCDEFGHIJKLMNOPQRSTUVWXYZ');
+      expect(cipher(-33, 'HIJKLMNOPQRSTUVWXYZABCDEFG')).toBe('ABCDEFGHIJKLMNOPQRSTUVWXYZ');
     });
 
     it('should return "abcdefghijklmnopqrstuvwxyz" for "hijklmnopqrstuvwxyzabcdefg" with offset 33', () => {
-      expect(cipher(33, 'hijklmnopqrstuvwxyzabcdefg', -1)).toBe('abcdefghijklmnopqrstuvwxyz');
+      expect(cipher(-33, 'hijklmnopqrstuvwxyzabcdefg')).toBe('abcdefghijklmnopqrstuvwxyz');
     });
 
     it('should return " !@" para " !@"', () => {
-      expect(cipher(33, ' !@', -1)).toEqual(' !@');
+      expect(cipher(-33, ' !@')).toEqual(' !@');
     });
   });
 });

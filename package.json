@@ -25,5 +25,16 @@
   "bugs": {
     "url": "https://github.com/paclaraujo/letters-for-my-princess/issues"
   },
-  "homepage": "https://github.com/paclaraujo/letters-for-my-princess#readme"
+  "homepage": "https://github.com/paclaraujo/letters-for-my-princess#readme",
+  "dependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/plugin-transform-modules-commonjs": "^7.6.0",
+    "babel-jest": "^24.9.0",
+    "eslint": "^5.9.0",
+    "gh-pages": "^2.1.1",
+    "htmlhint": "^0.11.0",
+    "jest": "^24.9.0",
+    "opener": "^1.5.1",
+    "serve": "^11.0.0"
+  }
 }

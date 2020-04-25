@@ -8,47 +8,39 @@ const finalMessage = document.querySelector("#final-message");
 const offsetAndOptions = document.querySelector("#offset-and-options");
 const writeLetter = document.querySelector("#write-letter");
 const returnToOptions = document.querySelector("#return-to-options");
+const clear = document.querySelector("#clear");
 
 const showFinalMessage = (message) => finalMessage.innerHTML = message;
 
-const openOffsetSelection = () => {
-    offsetAndOptions.classList.add("visible");
-    offsetAndOptions.classList.remove("invisible");
+const openAndCloseOptions = (visibilityOne, visibilityTwo) => {
+  offsetAndOptions.classList.add(visibilityOne);
+  offsetAndOptions.classList.remove(visibilityTwo);
 
-    writeLetter.classList.add("invisible");
-    writeLetter.classList.remove("visible");
+  writeLetter.classList.add(visibilityTwo);
+  writeLetter.classList.remove(visibilityOne);
 }
 
-const closeOffsetSelection = () => {
-    offsetAndOptions.classList.add("invisible");
-    offsetAndOptions.classList.remove("visible");
-
-    writeLetter.classList.add("visible");
-    writeLetter.classList.remove("invisible");
+const startCipher = (offset) => {
+  message.addEventListener("input", () => {
+    const cipheredMessage = cipher(offset, message.value);
+    showFinalMessage(cipheredMessage)
+  })
 }
 
-
-
-const startEncodeDecode = (type, offset) => {
-    message.addEventListener("input", () => {
-        if (type === "encode"){
-            const encodedMessage = cipher(offset, message.value);
-            showFinalMessage(encodedMessage)
-        } else if (type === "decode"){
-            const decodedMessage = cipher(-offset, message.value);
-            showFinalMessage(decodedMessage)
-        }
-    })
+const clearInputs = () => {
+  message.value = "";
+  finalMessage.innerHTML = "";
 }
 
 encodeBtn.addEventListener("click", () => {
-    closeOffsetSelection();
-    startEncodeDecode("encode", offset.value);  
+  openAndCloseOptions("invisible", "visible");
+  startCipher(offset.value);  
 })
 
 decodeBtn.addEventListener("click", () => {
-    closeOffsetSelection();
-    startEncodeDecode("decode", offset.value); 
+  openAndCloseOptions("invisible", "visible");
+  startCipher(-offset.value); 
 })
 
-returnToOptions.addEventListener("click", openOffsetSelection)
+returnToOptions.addEventListener("click", () => openAndCloseOptions("visible", "invisible"));
+clear.addEventListener("click", clearInputs);

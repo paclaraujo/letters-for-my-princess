@@ -7,7 +7,13 @@
     "test": "test"
   },
   "scripts": {
-    "test": "jest --verbose --coverage"
+    "htmlhint": "htmlhint src/*.html test/*.html",
+    "eslint": "eslint --ext .js src/ test/",
+    "pretest": "npm run eslint && npm run htmlhint",
+    "test": "jest --verbose --coverage",
+    "open-coverage-report": "opener ./coverage/lcov-report/index.html",
+    "start": "serve ./src",
+    "deploy": "gh-pages -d src"
   },
   "repository": {
     "type": "git",

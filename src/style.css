@@ -66,9 +66,8 @@
 }
 
 .center {
-  /* display: flex;
-  justify-content: center; */
-  display: none;
+  display: flex;
+  justify-content: center;
 }
 
 .container {
@@ -104,6 +103,14 @@
   display: flex;
   justify-content: space-around;
   height: 90vh;
+}
+
+.visible {
+  display: block;
+}
+
+.invisible {
+  display: none;
 }
 
 .cipher-container section {
@@ -164,5 +171,13 @@
   .cipher-container section {
     width: 90%;
     min-height: auto;
+  }
+
+  .visible {
+    display: block;
+  }
+  
+  .invisible {
+    display: none;
   }
 }

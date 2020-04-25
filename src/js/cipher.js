@@ -1,6 +1,6 @@
 import DATA from "./data.js";
 
-const cipher = (offset, string, direction = 1) => string.split('').map(char => asciiToString(char, offset * direction)).join('');
+const cipher = (offset, string) => string.split('').map(char => asciiToString(char, offset)).join('');
 
 const asciiToString = (char, offset) => {
   const code = char.charCodeAt()

@@ -83,6 +83,10 @@
 	-webkit-box-shadow: 4px 8px 6px -5px #777;
 }
 
+.error-message {
+  color: red;
+}
+
 .offset-input {
   background-color: transparent;
   border: none;

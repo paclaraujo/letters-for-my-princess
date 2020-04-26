@@ -9,6 +9,7 @@ const offsetAndOptions = document.querySelector("#offset-and-options");
 const writeLetter = document.querySelector("#write-letter");
 const returnToOptions = document.querySelector("#return-to-options");
 const clear = document.querySelector("#clear");
+const errorMessage = document.querySelector("#error");
 
 const showFinalMessage = (message) => finalMessage.innerHTML = message;
 
@@ -18,6 +19,23 @@ const openAndCloseOptions = (visibilityOne, visibilityTwo) => {
 
   writeLetter.classList.add(visibilityTwo);
   writeLetter.classList.remove(visibilityOne);
+}
+
+const validateOffset = (offset) => {
+  const parsedOffset = Number(offset);
+
+  if (isNaN(parsedOffset) || parsedOffset === ""){
+    errorMessage.innerHTML = "Insira um número";
+    return;
+  }
+
+  if (parsedOffset >= 0){
+    openAndCloseOptions("invisible", "visible");
+  } else {
+    openAndCloseOptions("visible", "invisible");
+  }
+
+  startCipher(parsedOffset);
 }
 
 const startCipher = (offset) => {
@@ -30,17 +48,12 @@ const startCipher = (offset) => {
 const clearInputs = () => {
   message.value = "";
   finalMessage.innerHTML = "";
+  errorMessage.innerHTML = "";
+  offset.value = "";
 }
 
-encodeBtn.addEventListener("click", () => {
-  openAndCloseOptions("invisible", "visible");
-  startCipher(offset.value);  
-})
-
-decodeBtn.addEventListener("click", () => {
-  openAndCloseOptions("invisible", "visible");
-  startCipher(-offset.value); 
-})
+encodeBtn.addEventListener("click", () => validateOffset(offset.value))
+decodeBtn.addEventListener("click", () => validateOffset(-offset.value))
 
 returnToOptions.addEventListener("click", () => {
   openAndCloseOptions("visible", "invisible");

@@ -10,6 +10,6 @@ const asciiToString = (char, offset) => {
   return isUpperCase || isLowerCase ? String.fromCharCode(offsetCalc(code, isUpperCase || isLowerCase, offset)) : char;
 }
 
-const offsetCalc = (code, minCode, offset) => ((((code - minCode + Number(offset) ) % DATA.ALPHABET_SIZE) + DATA.ALPHABET_SIZE) % DATA.ALPHABET_SIZE) + minCode;
+const offsetCalc = (code, minCode, offset) => ((((code - minCode + offset) % DATA.ALPHABET_SIZE) + DATA.ALPHABET_SIZE) % DATA.ALPHABET_SIZE) + minCode;
 
 export default cipher;

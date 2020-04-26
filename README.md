@@ -41,7 +41,7 @@ npm run pretest
 To deploy on GHPages run:
 
 ```
-npm run deply
+npm run deploy
 ```
 
 ## Built With

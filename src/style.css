@@ -199,7 +199,7 @@ footer p a:hover {
     display: none;
   }
 
-  footer {
+  .footer-box {
     background-color: #f4b7ad;
     text-align: center;
   }

@@ -58,3 +58,4 @@ npm run deply
 
 * @laboratoria
 * Inspired by *Beauty and the Beast* story.
+* Background Image by [@farahsfira](instagram.com/farahsfira) - [Behance](https://www.behance.net/gallery/84625785/Disney-Illustration)

@@ -13,7 +13,7 @@
 }
 
 .home-description {
-  margin: 5vh 5vw;
+  margin: 4vh 5vw;
   width: 40vw;
 }
 
@@ -102,7 +102,7 @@
   align-items: center;
   display: flex;
   justify-content: space-around;
-  height: 90vh;
+  height: 82vh;
 }
 
 .visible {
@@ -147,6 +147,24 @@
   word-break: break-all;
 }
 
+footer {
+  color:#908a82;
+  font-size: 20px;
+  padding-left: 5vw;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer p a {
+  color:#908a82;
+}
+
+footer p a:hover {
+  color:#f4b7ad;
+}
+
 @media only screen and (max-width: 1350px) {
   .home-container {
     background-image: url("./assets/mobile.png");
@@ -161,16 +179,16 @@
     width: 80vw;
   }
   .cipher-container {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: unset;
     height: auto;
+    justify-content: unset;
   }
 
   .cipher-container section {
-    width: 90%;
     min-height: auto;
+    width: 90%;
   }
 
   .visible {
@@ -179,5 +197,10 @@
   
   .invisible {
     display: none;
+  }
+
+  footer {
+    background-color: #f4b7ad;
+    text-align: center;
   }
 }

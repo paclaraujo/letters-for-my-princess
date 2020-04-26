@@ -2,7 +2,9 @@
 
 An app to encode and decode messages.
 
-![Demonstration](https://media.giphy.com/media/MXvJcEMH0l7HnYhPBX/giphy.gif)
+<p align="center">
+  <img src="https://media.giphy.com/media/MXvJcEMH0l7HnYhPBX/giphy.gif" alt="Demonstration" />
+</p>
 
 ## Getting Started
 

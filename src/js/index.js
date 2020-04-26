@@ -42,5 +42,9 @@ decodeBtn.addEventListener("click", () => {
   startCipher(-offset.value); 
 })
 
-returnToOptions.addEventListener("click", () => openAndCloseOptions("visible", "invisible"));
+returnToOptions.addEventListener("click", () => {
+  openAndCloseOptions("visible", "invisible");
+  clearInputs();
+})
+
 clear.addEventListener("click", clearInputs);

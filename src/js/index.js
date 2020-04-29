@@ -29,12 +29,7 @@ const validateOffset = (offset) => {
     return;
   }
 
-  if (parsedOffset >= 0){
-    openAndCloseOptions("invisible", "visible");
-  } else {
-    openAndCloseOptions("visible", "invisible");
-  }
-
+  openAndCloseOptions("invisible", "visible");
   startCipher(parsedOffset);
 }
 
